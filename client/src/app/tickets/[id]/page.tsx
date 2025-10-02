@@ -27,11 +27,9 @@ const JNR_MINIMOTO_PACKAGE = [
 	{value:"night-130",label:"Night $130",hint:"bike, suit, gloves, boots, track fee + training drills"},
 ];
 
-export default function TicketPage({params}:{params:{id:string}}){
+export default async function TicketPage({ params }: any) {
 	async function action(formData:FormData){
 		"use server";
-		// TODO: persist - replace with your DB/API call
-		// Example payload extraction:
 		const payload = Object.fromEntries(formData.entries());
 		console.log("booking", params.id, payload);
 	}
